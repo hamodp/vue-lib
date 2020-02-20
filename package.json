@@ -4,6 +4,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name vue-lib src/lib.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -33,5 +34,10 @@
     "vuetify-loader": "^1.3.0",
     "vuex": "^3.0.1",
     "vuetify": "^2.2.11"
+  },
+  "main": "./dist/vue-lib.common.js",
+  "description": "project to test creating a vue library",
+  "publishConfig": {
+    "registry": "http://localhost:8081/repository/npm/"
   }
 }
