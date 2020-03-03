@@ -7,7 +7,7 @@ sed -n s/\"resolved\"://gp package-lock.json | sed s/,//g | sed "s/ //g" | sed "
 pushd repos
 while IFS="" read -r p || [ -n "$p" ]
 do
-  wget $p
+  curl -O $p
 done < npmRepos
 cp ../upload.sh ./
 popd
